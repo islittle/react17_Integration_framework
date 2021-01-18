@@ -1,9 +1,17 @@
+<!--
+ * @Author: wangfeng
+ * @Date: 1985-10-26 16:15:00
+ * @LastAuthor: wangfeng
+ * @lastTime: 2021-01-18 19:43:51
+ * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/README.md
+ * @Description: 说明文档
+-->
 #Create React应用程序入门
 此项目是用[Create React App]引导的(https://github.com/facebook/create-react-app).
 
 在项目目录中，可以运行：
 
-###`yarn start`
+`yarn start`
 
 以开发模式运行应用程序
 打开[http://localhost:3000](http://localhost：3000）在浏览器中查看。
@@ -12,12 +20,12 @@
 
 
 
-###yarn test`
+`yarn test`
 
 在交互式监视模式下启动测试运行程序
 参见[运行测试]一节(https://facebook.github.io/create-react-app/docs/running-tests)更多信息。
 
-###`yarn build`
+`yarn build`
 
 将用于生产的应用程序生成到“build”文件夹
 它在生产模式下正确地进行反应，并优化构建以获得最佳性能。
