@@ -20,3 +20,26 @@
 
 
 备注: history不能升级到5.x
+
+在项目目录中，可以运行：
+
+##yarn start
+
+以开发模式运行应用程序
+打开[http://localhost:3000](http://localhost：3000）在浏览器中查看。
+如果进行编辑，页面将重新加载
+您还将在控制台中看到任何lint错误。
+
+
+
+##yarn test
+
+在交互式监视模式下启动测试运行程序
+参见[运行测试]一节(https://facebook.github.io/create-react-app/docs/running-tests)更多信息。
+
+##yarn build
+
+将用于生产的应用程序生成到“build”文件夹
+它在生产模式下正确地进行反应，并优化构建以获得最佳性能。
+构建被缩小，文件名包含哈希
+你的应用程序已准备好部署！
