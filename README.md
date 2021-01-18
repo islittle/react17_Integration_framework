@@ -1,11 +1,3 @@
-<!--
- * @Author: wangfeng
- * @Date: 1985-10-26 16:15:00
- * @LastAuthor: wangfeng
- * @lastTime: 2021-01-18 19:43:51
- * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/README.md
- * @Description: 说明文档
--->
 #Create React应用程序入门
 此项目是用[Create React App]引导的(https://github.com/facebook/create-react-app).
 
