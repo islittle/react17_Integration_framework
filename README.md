@@ -26,7 +26,7 @@
 ##yarn start
 
 以开发模式运行应用程序
-打开[http://localhost:3000](http://localhost：3000）在浏览器中查看。
+打开http://localhost：3000在浏览器中查看。
 如果进行编辑，页面将重新加载
 您还将在控制台中看到任何lint错误。
 
