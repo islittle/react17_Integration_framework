@@ -1,10 +1,3 @@
-<!--
- * @Author: wangfeng
- * @Date: 1985-10-26 16:15:00
- * @LastAuthor: wangfeng
- * @lastTime: 2021-01-18 18:37:14
- * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/README.md
--->
 #Create React应用程序入门
 此项目是用[Create React App]引导的(https://github.com/facebook/create-react-app).
 
@@ -48,3 +41,6 @@
 11. css版本版本兼容
 12. less的style继承使用
 等等，并且添加一些自定义工具
+
+
+备注: history不能升级到5.x
