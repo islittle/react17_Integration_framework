@@ -23,7 +23,7 @@
 
 在项目目录中，可以运行：
 
-##yarn start
+>yarn start
 
 以开发模式运行应用程序
 打开http://localhost：3000在浏览器中查看。
@@ -32,12 +32,12 @@
 
 
 
-##yarn test
+>yarn test
 
 在交互式监视模式下启动测试运行程序
 参见[运行测试]一节(https://facebook.github.io/create-react-app/docs/running-tests)更多信息。
 
-##yarn build
+>yarn build
 
 将用于生产的应用程序生成到“build”文件夹
 它在生产模式下正确地进行反应，并优化构建以获得最佳性能。
