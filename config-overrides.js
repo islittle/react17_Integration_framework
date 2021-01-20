@@ -2,10 +2,12 @@
  * @Author: wangfeng
  * @Date: 2020-02-20 12:02:39
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-20 19:15:06
+ * @lastTime: 2021-01-20 19:48:02
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/config-overrides.js
  */
-const { override, fixBabelImports, addWebpackAlias, addDecoratorsLegacy, addPostcssPlugins, addLessLoader } = require('customize-cra');
+const {
+    override, fixBabelImports, addWebpackAlias, addDecoratorsLegacy, addPostcssPlugins, addLessLoader,
+} = require('customize-cra');
 const path = require('path');
 
 const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
@@ -15,45 +17,45 @@ const getStyleLoaders = (cssOptions, preProcessor, lessOptions) => { // 这个�
         require.resolve('style-loader'),
         {
             loader: require.resolve('css-loader'),
-            options: cssOptions
+            options: cssOptions,
         },
         {
             loader: require.resolve('postcss-loader'),
             options: {
                 ident: 'postcss',
                 plugins: () => [
+                    // eslint-disable-next-line global-require
                     require('postcss-flexbugs-fixes'),
+                    // eslint-disable-next-line global-require
                     require('postcss-preset-env')({
                         autoprefixer: {
-                            flexbox: 'no-2009'
+                            flexbox: 'no-2009',
                         },
-                        stage: 3
-                    })
-                ]
-            }
-        }
+                        stage: 3,
+                    }),
+                ],
+            },
+        },
     ];
     if (preProcessor) {
         loaders.push({
             loader: require.resolve(preProcessor),
-            options: lessOptions
+            options: lessOptions,
         });
     }
     return loaders;
 };
 
-
 function resolve(dir) {
     return path.join(__dirname, '.', dir)
 }
 // 主题色
-const theme = require('./package').theme
+const { theme } = require('./package')
 
 // const svgSpriteDirs = [
 //     require.resolve('antd-mobile').replace(/warn\.js$/, ''), // antd-mobile 内置svg
 //     resolve('src/app/assets/svg/'),  // 业务代码本地私有 svg 存放目录
 // ];
-
 
 module.exports = override(
     // antd按需加载
@@ -84,9 +86,10 @@ module.exports = override(
         '@reducers': resolve('src/app/reducers')
     }),
     // pxtorem
+    // eslint-disable-next-line global-require
     addPostcssPlugins([require('postcss-pxtorem')({
         rootValue: 100,
-        selectorBlackList: [], //过滤
+        selectorBlackList: [], // 过滤
         propList: ['*'],
         minPixelValue: 2,
     }),]),
@@ -101,26 +104,27 @@ module.exports = override(
     // }),
     addDecoratorsLegacy(), // 使用装饰器
     // disableEsLint(),
-    (config)=>{
+    (config) => {
         // 增加处理less module配置 customize-cra 不提供 less.module 只提供css.module
         // 然后使用的时候 把原来的less文件改成.module.less 然后在引入文件处改成 import Style from 'XXX.module.less' < div className={Style.styleName}></div>
-        const oneOf_loc= config.module.rules.findIndex(n => n.oneOf) // 这里的config是全局的
-        config.module.rules[oneOf_loc].oneOf = [
-        {
-            test: /\.module\.less$/,
-            use: getStyleLoaders(
+        const oneOfLoc = config.module.rules.findIndex((nc) => nc.oneOf) // 这里的config是全局的
+        // eslint-disable-next-line no-param-reassign
+        config.module.rules[oneOfLoc].oneOf = [
             {
-                importLoaders: 2,
-                modules: {
-                getLocalIdent: getCSSModuleLocalIdent
-                }
+                test: /\.module\.less$/,
+                use: getStyleLoaders(
+                    {
+                        importLoaders: 2,
+                        modules: {
+                            getLocalIdent: getCSSModuleLocalIdent,
+                        },
+                    },
+                    'less-loader',
+                ),
             },
-            'less-loader'
-            )
-        },
-        ...config.module.rules[oneOf_loc].oneOf
+            ...config.module.rules[oneOfLoc].oneOf,
         ]
-    
+
         return config
     },
 );

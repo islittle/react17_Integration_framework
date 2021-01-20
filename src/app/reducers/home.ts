@@ -2,7 +2,7 @@
  * @Author: wangfeng
  * @Date: 2021-01-14 11:53:46
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-20 17:24:50
+ * @lastTime: 2021-01-20 19:33:38
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/app/reducers/home.ts
  */
 import * as types from '../constants/ActionTypes'

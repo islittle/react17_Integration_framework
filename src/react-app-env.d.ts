@@ -2,7 +2,7 @@
  * @Author: wangfeng
  * @Date: 2021-01-13 18:39:46
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-20 14:53:41
+ * @lastTime: 2021-01-20 19:48:47
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/react-app-env.d.ts
  */
 /// <reference types="node" />
@@ -47,8 +47,8 @@ declare module '*.png' {
 }
 
 declare module '*.webp' {
-    const src: string;
-    export default src;
+  const src: string;
+  export default src;
 }
 
 declare module '*.svg' {

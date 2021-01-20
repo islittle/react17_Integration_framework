@@ -36,7 +36,7 @@
         "import/no-anonymous-default-export": "off",
         "no-use-before-define": "off",
         "@typescript-eslint/no-explicit-any": ["off"], // 关闭any类型时的警告
-        "indent": ["warn", 4],
+        "indent": ["off", 4],
         "quotes": [1, "single"], // 字符串总为一个单引号包裹
         "semi": [
             0
