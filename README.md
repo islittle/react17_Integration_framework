@@ -2,7 +2,7 @@
  * @Author: wangfeng
  * @Date: 2021-01-18 19:55:44
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-20 20:00:15
+ * @lastTime: 2021-01-20 20:01:47
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/README.md
  * @Description: 说明文档
 -->
@@ -30,7 +30,9 @@
 15. alias (Decorators装饰器)
 16. customize-cra (webpack配置扩展和启用的入口)
 17. 低版本promise的处理
+
 ...
+
 等等，并且添加一些自定义工具
 
 
