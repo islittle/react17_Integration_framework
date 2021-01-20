@@ -1,3 +1,10 @@
+/*
+ * @Author: wangfeng
+ * @Date: 2021-01-13 18:39:46
+ * @LastAuthor: wangfeng
+ * @lastTime: 2021-01-20 14:53:41
+ * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/react-app-env.d.ts
+ */
 /// <reference types="node" />
 /// <reference types="react" />
 /// <reference types="react-dom" />
@@ -67,5 +74,19 @@ declare module '*.module.scss' {
 
 declare module '*.module.sass' {
   const classes: { readonly [key: string]: string };
+  export default classes;
+}
+
+declare module '*.module.less' {
+  const classes: {
+    [key: string]: string;
+  };
+  export default classes;
+}
+
+declare module '*.less' {
+  const classes: {
+    [key: string]: string;
+  };
   export default classes;
 }

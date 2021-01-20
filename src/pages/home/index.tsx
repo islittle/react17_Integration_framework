@@ -1,22 +1,56 @@
-import React from 'react';
+/*
+ * @Author: wangfeng
+ * @Date: 1985-10-26 16:15:00
+ * @LastAuthor: wangfeng
+ * @lastTime: 2021-01-20 19:21:24
+ * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/pages/home/index.tsx
+ */
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import logo from '@svg/logo.svg';
-// import '@svg/logo.svg';
-import './App.css';
+import { NavBar, Button } from 'antd-mobile'
 
-console.log('svg', logo)
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <svg className="svg_img"><use xlinkHref="#logo" /></svg>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <Link to='test'>
-          测试页面
-        </Link>
-      </header>
-    </div>
-  );
+import connect from '@utils/connect'
+
+import { ReactComponent as LoGo } from '@svgs/logo.svg'
+
+import './index.scss'
+
+interface IProps {
+    actions: {
+        fetchHome: (...params: any[]) => any,
+    },
+    HomeState: {
+        text: string,
+    }
 }
+@connect('/', 'HomeState', 'fetchHome')
+export default class Home extends Component<IProps> {
+    private testReduxButtonClickCallFunc = () => {
+        const { actions } = this.props || {}
+        actions.fetchHome()
+    }
 
-export default App;
+    render() {
+        const { HomeState } = this.props || {}
+        const { text } = HomeState || {}
+        return (
+            <div className="App">
+                <NavBar
+                    mode="light"
+                >
+                    欢迎
+                </NavBar>
+                <header className="App-header">
+                    <LoGo className="App-logo" />
+                </header>
+                <Link to="test" className="linkTestButton">
+                    点击跳转到test页面
+                </Link>
+                <Button type="primary" className="testReduxButton" onClick={this.testReduxButtonClickCallFunc}>
+                    测试redux
+                    {text}
+                </Button>
+            </div>
+        )
+    }
+}

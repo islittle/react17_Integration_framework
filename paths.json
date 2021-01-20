@@ -1,0 +1,37 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@assets/*": [
+                "./src/app/assets/*"
+            ],
+            "@components/*": [
+                "./src/components/*"
+            ],
+            "@config/*": [
+                "./config/*"
+            ],
+            "@images/*": [
+                "./src/app/assets/images/*"
+            ],
+            "@svgs/*": [
+                "./src/app/assets/svgs/*"
+            ],
+            "@pages/*": [
+                "./src/pages/*"
+            ],
+            "@utils/*": [
+                "./src/utils/*"
+            ],
+            "@constants/*": [
+                "./src/app/constants/*"
+            ],
+            "@actions/*": [
+                "./src/app/actions/*"
+            ],
+            "@reducers/*": [
+                "./src/app/reducers/*"
+            ]
+        }
+    }
+}

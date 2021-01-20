@@ -1,9 +1,19 @@
 .App {
   text-align: center;
+  .linkTestButton {
+    padding: 20px;
+    display: inline-block;
+  }
+  .testReduxButton{
+    margin: 0 30px;
+  }
+  .hooksTestButton {
+    margin: 30px;
+  }
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 360px;
   pointer-events: none;
 }
 
