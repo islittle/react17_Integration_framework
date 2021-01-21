@@ -1,7 +1,7 @@
 /*
  * @Author: wangfeng
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-20 18:12:23
+ * @lastTime: 2021-01-21 10:03:36
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/index.tsx
  * @Description: 入口路由配置文件
  */
@@ -19,6 +19,7 @@ import reportWebVitals from './reportWebVitals'
 
 const App = loadable(() => import(/* webpackChunkName: "home" */ './pages/home'))
 const Test = loadable(() => import(/* webpackChunkName: "test" */ './pages/test'))
+const NotFound = loadable(() => import(/* webpackChunkName: "404" */ './pages/404'))
 
 const browserHistory = createBrowserHistory()
 const store = configureStore(browserHistory)
@@ -29,7 +30,7 @@ const routes = (browserHistoryContent: HistoryAPI<any>) => (
             {/* <Redirect from="/" to='index' /> */}
             <Route path="/" exact component={App} />
             <Route path="/test" exact component={Test} />
-            <Route path="*" component={App} />
+            <Route path="*" component={NotFound} />
         </Switch>
     </Router>
 )

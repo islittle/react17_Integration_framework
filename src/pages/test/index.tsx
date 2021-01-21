@@ -1,8 +1,8 @@
 /*
  * @Author: wangfeng
- * @Date: 1985-10-26 16:15:00
+ * @Date: 2021-01-19 16:15:00
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-20 18:17:00
+ * @lastTime: 2021-01-21 09:56:39
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/pages/test/index.tsx
  * @Description: 测试页面
  */
@@ -11,7 +11,7 @@ import { NavBar, Icon, Button } from 'antd-mobile'
 
 import './index.scss'
 
-function App() {
+function Test() {
     const [count, setCount] = useState(0)
     return (
         <div className="Test">
@@ -31,7 +31,7 @@ function App() {
                     test-page
                 </p>
             </header>
-            <Button type="primary">测试按钮</Button>
+
             <Button onClick={() => setCount(count + 1)} className="hooksTestButton">
                 点击测试hooks修改state值，当前为：
                 {count}
@@ -40,4 +40,4 @@ function App() {
     )
 }
 
-export default App
+export default Test
