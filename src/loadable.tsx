@@ -2,15 +2,19 @@
  * @Author: wangfeng
  * @Date: 2021-01-14 15:36:55
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-20 19:02:54
+ * @lastTime: 2021-01-29 17:42:20
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/loadable.tsx
  */
 import React from 'react'
 import Loadable from 'react-loadable';
 import { ActivityIndicator, Result, Icon } from 'antd-mobile';
-
 // 通用的过场组件
-const MyLoadingComponent = ({ isLoading = false, error = false }) => {
+interface IProps {
+    isLoading: boolean,
+    error: boolean,
+}
+
+const MyLoadingComponent = ({ isLoading = false, error = false }: IProps) => {
     if (isLoading) {
         // 处理加载状态
         return <ActivityIndicator toast text="正在加载..." />;

@@ -2,7 +2,7 @@
  * @Author: wangfeng
  * @Date: 2021-01-19 16:15:00
  * @LastAuthor: wangfeng
- * @lastTime: 2021-01-21 09:54:07
+ * @lastTime: 2021-01-29 17:34:46
  * @FilePath: /yit-h5/Users/wangfeng/work/reactnew-demo/src/pages/home/index.tsx
  */
 import React, { Component } from 'react'
@@ -17,7 +17,7 @@ import './index.scss'
 
 interface IProps {
     actions: {
-        fetchHome: (...params: any[]) => any,
+        fetchHome: () => any,
     },
     HomeState: {
         text: string,
